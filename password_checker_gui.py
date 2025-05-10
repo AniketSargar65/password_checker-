@@ -20,10 +20,10 @@ def display_strength():
     password = entry.get()
     strength = check_password_strength(password)
 
-    # GUI वर strength label update करा
+    # Update the strength label in the GUI
     strength_label.config(text=f"Strength: {strength}")
 
-    # Strength नुसार रंग बदला
+    # Change the label color based on strength
     if strength == "Weak":
         strength_label.config(fg="red")
     elif strength == "Medium":
@@ -44,7 +44,7 @@ entry.pack(pady=10)
 check_button = tk.Button(root, text="Check Strength", command=display_strength)
 check_button.pack(pady=20)
 
-# Strength दाखवण्यासाठी label
+# Label to display strength
 strength_label = tk.Label(root, text="", font=("Arial", 14))
 strength_label.pack(pady=10)
 
